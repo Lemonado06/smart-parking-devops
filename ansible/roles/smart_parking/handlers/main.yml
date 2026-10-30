@@ -1,0 +1,9 @@
+---
+- name: Reload systemd
+  ansible.builtin.systemd:
+    daemon_reload: true
+
+- name: Restart smart-parking
+  ansible.builtin.systemd:
+    name: "{{ service_name }}"
+    state: restarted

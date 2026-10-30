@@ -1,0 +1,6 @@
+---
+app_port: 8085
+app_user: parking
+app_dir: /opt/smart-parking
+service_name: smart-parking
+jar_src: "{{ playbook_dir }}/../target/smart-parking-0.0.1-SNAPSHOT.jar"
