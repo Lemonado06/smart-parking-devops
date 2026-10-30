@@ -1,0 +1,6 @@
+---
+- name: Configure server and deploy Smart Parking service
+  hosts: appservers
+  become: true
+  roles:
+    - smart_parking

@@ -1,0 +1,11 @@
+[Unit]
+Description=Smart Parking service
+After=network.target
+
+[Service]
+User={{ app_user }}
+ExecStart=/usr/bin/java -jar {{ app_dir }}/smart-parking.jar --server.port={{ app_port }}
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
