@@ -43,6 +43,9 @@
     state: started
     daemon_reload: true
 
+- name: Apply pending handlers before checking the port
+  ansible.builtin.meta: flush_handlers
+
 - name: Wait for the app to listen on its port
   ansible.builtin.wait_for:
     port: "{{ app_port }}"
